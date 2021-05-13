@@ -1,8 +1,7 @@
 import React from 'react';
-import wallpaper from '../../../img/wallpaper.jpg'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components';
-import { createGlobalStyle } from 'styled-components'
+
 const index = () => {
    return (
       <Container>
@@ -13,8 +12,6 @@ const index = () => {
             <Linken to='/'>CONTACT</Linken>
             <Linken to='/'>SIGN IN</Linken>
          </Navbar>
-         <Image src={wallpaper} alt="wallpaper content"/>
-         <P>The best option for today, tomorrow and always</P>
       </Container>
    )
 };
@@ -39,12 +36,6 @@ const Navbar = styled.nav `
       flex-direction: column;
    }
 `;
-const Image = styled.img `
-   max-width: 100%;
-   @media screen and (max-width: 768px){
-      height: 60vw;
-   }
-`;
 const Linken = styled(Link) `
    font-size: 2.1vw;
    font-weigth: bold;
@@ -58,18 +49,6 @@ const Linken = styled(Link) `
    @media screen and (max-width: 768px){
       font-size: 4.3vw;
       margin-bottom: 4px;
-      text-align: center;
-   }
-`;
-const P = styled.p `
-   position: absolute;
-   color: white;
-   font-size: 5vw;
-   top: 20vw;
-   margin: 10px;
-   @media screen and (max-width: 768px){
-      top: 50vw;
-      font-size: 6vw;
       text-align: center;
    }
 `;
