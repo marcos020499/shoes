@@ -103,6 +103,10 @@ const Right = styled.h4 `
    font-size: 2vw;
    display: flex;
    justify-content: center;
+   @media screen and (max-width: 768px){
+      font-size: 4vw;
+      padding-bottom: 10px;
+   }
 `;
 const ImageContainer = styled.div `
    padding: 2vw;
