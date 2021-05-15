@@ -5,6 +5,7 @@ import details2 from '../../../img/details2.jpg'
 import details3 from '../../../img/details3.jpg'
 import details4 from '../../../img/details4.jpg'
 import styled from 'styled-components';
+import ReactStars from "react-rating-stars-component";
 
 const index = () => {
    return (
@@ -16,23 +17,34 @@ const index = () => {
             <Image src={details4} alt='details 4'/>
          </ContainerImages>
          <ContainerDetails>
+            <Ptitle>Men's running shoes</Ptitle>
             <H2>NIKE RUNNING SHOES AIR MAX 270</H2>
-            <H2>Select your perfect shoes</H2>
+            <H4>Select your perfect shoes</H4>
             <ButtonsDiv>
-               <Button>23 CM</Button>
-               <Button>24 CM</Button>
-               <Button>24.5 CM</Button>
-               <Button>25 CM</Button>
-               <Button>25.5 CM</Button>
-               <Button>26 CM</Button>
-               <Button>27 CM</Button>
-               <Button>27.5 CM</Button>
-               <Button>28 CM</Button>
-               <Button>28.5 CM</Button>
-               <Button>29 CM</Button>
-               <Button>30 CM</Button>
+               <Button>23 <small>CM</small></Button>
+               <Button>24 <small>CM</small></Button>
+               <Button>24.5 <small>CM</small></Button>
+               <Button>25 <small>CM</small></Button>
+               <Button>25.5 <small>CM</small></Button>
+               <Button>26 <small>CM</small></Button>
+               <Button>27 <small>CM</small></Button>
+               <Button>27.5 <small>CM</small></Button>
+               <Button>28 <small>CM</small></Button>
+               <Button>28.5 <small>CM</small></Button>
+               <Button>29 <small>CM</small></Button>
+               <Button>30 <small>CM</small></Button>
             </ButtonsDiv>
-            <ButtonBuy>Buy this product</ButtonBuy>
+            <ButtonBuy>Add to bag</ButtonBuy>
+            <P>Get after those long runs with the Nike ZoomX Invincible Run Flyknit. A lightweight and responsive foam delivers a super-soft feel and helps deliver energy with every step. Breathable and secure, it's one of our most tested shoes. Lace up and feel the potential when your foot hits the pavement.</P>
+            <Rating>
+               <H3>REVIEWS</H3>
+               <ReactStars
+                  count={3.4}
+                  size={40}
+                  color={"black"}
+                  color2={'#ffd700'}
+               />
+            </Rating>
          </ContainerDetails>
       </Content>
    )
@@ -81,7 +93,7 @@ const Button = styled.button `
    }
 `;
 const ButtonBuy = styled.button `
-   font-size: 2vw;
+   font-size: 1.8vw;
    margin: 1%;
    width: 38vw;
    height: 6vw;
@@ -97,7 +109,40 @@ const ButtonsDiv = styled.div `
    display: inline-block;
 `;
 const H2 = styled.h2 `
+   font-size: 2.6vw;
+   padding: 0 0 0 2%;
+   font-weight: bolder;
+`;
+const H3 = styled.h3 `
+   display: flex;
+   font-size: 1.8vw;
+`;
+const H4 = styled.h4 `
+   display: flex;
+   padding: 0 0 0 2%;
    font-size: 1.6vw;
-   padding: 2%;
-   border-radius: 5px;
+`;
+const P = styled.p `
+   color: rgb(126, 46, 255);
+   font-size: 1.7vw;
+   justify-content: justify;
+   @media screen and (max-width: 768px){
+      font-size: 6vw;
+      text-align: center;
+   }
+`;
+const Ptitle = styled(P) `
+   color: gray;
+   padding: 0 0 0 2%;
+   font-size: 1.9vw;
+   justify-content: justify;
+   @media screen and (max-width: 768px){
+      font-size: 6vw;
+      text-align: center;
+   }
+`;
+const Rating = styled.div `
+   display: flex;
+   @media screen and (max-width: 768px){
+   }
 `;
