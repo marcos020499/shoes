@@ -6,6 +6,7 @@ import details3 from '../../../img/details3.jpg'
 import details4 from '../../../img/details4.jpg'
 import styled from 'styled-components';
 import ReactStars from "react-rating-stars-component";
+import Rating from "react-rating";
 
 const index = () => {
    return (
@@ -18,33 +19,44 @@ const index = () => {
          </ContainerImages>
          <ContainerDetails>
             <Ptitle>Men's running shoes</Ptitle>
+            <Ratings>
+               <Rating 
+                  emptySymbol="fa fa-star-o fa-2x"
+                  fullSymbol="fa fa-star fa-2x"
+                  fractions={2}
+                  initialRating={3}
+                  placeholderRating={2}
+               />
+            </Ratings>
             <H2>NIKE RUNNING SHOES AIR MAX 270</H2>
             <H4>Select your perfect shoes</H4>
             <ButtonsDiv>
-               <Button>23 <small>CM</small></Button>
-               <Button>24 <small>CM</small></Button>
-               <Button>24.5 <small>CM</small></Button>
-               <Button>25 <small>CM</small></Button>
-               <Button>25.5 <small>CM</small></Button>
-               <Button>26 <small>CM</small></Button>
-               <Button>27 <small>CM</small></Button>
-               <Button>27.5 <small>CM</small></Button>
-               <Button>28 <small>CM</small></Button>
-               <Button>28.5 <small>CM</small></Button>
-               <Button>29 <small>CM</small></Button>
-               <Button>30 <small>CM</small></Button>
+               <Button>23 <Small>CM</Small></Button>
+               <Button>24 <Small>CM</Small></Button>
+               <Button>24.5 <Small>CM</Small></Button>
+               <Button>25 <Small>CM</Small></Button>
+               <Button>25.5 <Small>CM</Small></Button>
+               <Button>26 <Small>CM</Small></Button>
+               <Button>27 <Small>CM</Small></Button>
+               <Button>27.5 <Small>CM</Small></Button>
+               <Button>28 <Small>CM</Small></Button>
+               <Button>28.5 <Small>CM</Small></Button>
+               <Button>29 <Small>CM</Small></Button>
+               <Button>30 <Small>CM</Small></Button>
             </ButtonsDiv>
             <ButtonBuy>Add to bag</ButtonBuy>
             <P>Get after those long runs with the Nike ZoomX Invincible Run Flyknit. A lightweight and responsive foam delivers a super-soft feel and helps deliver energy with every step. Breathable and secure, it's one of our most tested shoes. Lace up and feel the potential when your foot hits the pavement.</P>
-            <Rating>
+            <Ratings>
                <H3>REVIEWS</H3>
-               <ReactStars
-                  count={3.4}
-                  size={40}
-                  color={"black"}
-                  color2={'#ffd700'}
+               <Rating 
+                  emptySymbol="fa fa-star-o fa-2x"
+                  fullSymbol="fa fa-star fa-2x"
+                  fractions={2}
+                  initialRating={3}
+                  placeholderRating={2}
+                  onHover={(rate) => document.getElementById('label-onrate').innerHTML = rate || ''}
                />
-            </Rating>
+            </Ratings>
          </ContainerDetails>
       </Content>
    )
@@ -52,14 +64,8 @@ const index = () => {
 export default index;
 const Content = styled.div `
    display: flex;
-`;
-const Image = styled.img `
-   max-width: 48%;
-   max-height: 55%;
-   padding: 1%;
-   transition: width 1s, height 1s, transform 1s;
-   &:hover {
-      transform : scale(1.05);
+   @media screen and (max-width: 768px){
+      display: inline-block;
    }
 `;
 const ContainerImages = styled.div `
@@ -67,6 +73,27 @@ const ContainerImages = styled.div `
    width: 65%;
    height: 10%
    @media screen and (max-width: 768px){
+      width: 100%;
+      height: 20%;
+      display: inline-flexbox;
+      justify-content: center;
+      text-align: center;
+      padding-bottom: 50vw;
+   }
+`;
+const Image = styled.img `
+   max-width: 48%;
+   max-height: 55%;
+   padding: 1%;
+   transition: width 1s, height 1s, transform 1s;
+   &:hover {
+      transform : scale(2.05);
+   }
+   @media screen and (max-width: 768px){
+      max-width: none;
+      width: 40%;
+      max-height: none;
+      justify-content: end;
    }
 `;
 const ContainerDetails = styled.div `
@@ -80,16 +107,23 @@ const ContainerDetails = styled.div `
 `;
 const Button = styled.button `
    font-size: 1.5vw;
-   margin: 1%;
-   width: 12vw;
-   height: 6vw;
-   border-radius: 5px;
+   margin: 4% 2% 3% 1%;
+   width: 10vw;
+   height: 4vw;
+   border-radius: 3px;
    background-color: white;
    border: 1px solid black;
    transition: width 1s, height 1s, transform 1s;
    &:hover {
-      transform : scale(1.05);
-      background: purple;
+      transform : scale(1.2);
+      background: gray;
+   }
+   @media screen and (max-width: 768px){
+      margin: 1%;
+      font-size: 4vw;
+      text-align: center;
+      width: 20vw;
+      height: 10vw;
    }
 `;
 const ButtonBuy = styled.button `
@@ -102,33 +136,61 @@ const ButtonBuy = styled.button `
    border: 1px solid black;
    color: white;
    &:hover {
-      background: purple;
+      background: gray;
+   }
+   @media screen and (max-width: 768px){
+      font-size: 5vw;
+      width: 70vw;
+      margin: 5vw 0 0 15vw;
+      height: 10vw;
+   }
+`;
+const Small = styled.small `
+   font-size: 0.8vw;
+   @media screen and (max-width: 768px){
+      font-size: 3vw;
    }
 `;
 const ButtonsDiv = styled.div `
    display: inline-block;
+   margin-left: 30px;
 `;
 const H2 = styled.h2 `
    font-size: 2.6vw;
    padding: 0 0 0 2%;
    font-weight: bolder;
+   @media screen and (max-width: 768px){
+      font-size: 5vw;
+      text-align: center;
+   }
 `;
 const H3 = styled.h3 `
    display: flex;
    font-size: 1.8vw;
+   @media screen and (max-width: 768px){
+      font-size: 4vw;
+      text-align: center;
+   }
 `;
 const H4 = styled.h4 `
    display: flex;
    padding: 0 0 0 2%;
    font-size: 1.6vw;
+   @media screen and (max-width: 768px){
+      padding: 0%;
+      font-size: 4vw;
+      justify-content: center;
+      text-align: center;
+   }
 `;
 const P = styled.p `
    color: rgb(126, 46, 255);
    font-size: 1.7vw;
    justify-content: justify;
    @media screen and (max-width: 768px){
-      font-size: 6vw;
-      text-align: center;
+      font-size: 4vw;
+      padding: 4vw;
+      text-align: justify;
    }
 `;
 const Ptitle = styled(P) `
@@ -137,12 +199,15 @@ const Ptitle = styled(P) `
    font-size: 1.9vw;
    justify-content: justify;
    @media screen and (max-width: 768px){
-      font-size: 6vw;
+      font-size: 4.5vw;
       text-align: center;
    }
 `;
-const Rating = styled.div `
+const Ratings = styled.div `
    display: flex;
    @media screen and (max-width: 768px){
+      display: flex;
+      justify-content: center;
+      font-size: 4.5vw;
    }
 `;

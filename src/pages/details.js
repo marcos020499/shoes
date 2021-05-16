@@ -15,7 +15,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     background: blue;
     margin: 0;
-    background: linear-gradient(rgb(194, 194, 194), gray);
+    background: linear-gradient(white, gray);
     font-family: 'Inconsolata', monospace;
   }
 `

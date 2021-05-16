@@ -6,13 +6,28 @@ import red from '../../../img/red.png'
 import styled from 'styled-components';
 import { Link } from 'react-router-dom'
 import wallpaper from '../../../img/wallpaper.jpg'
+import wallpaper2 from '../../../img/wallpaper2.jpg'
+import wallpaper3 from '../../../img/wallpaper3.jpg'
 import 'font-awesome/css/font-awesome.min.css';
 import ReactStars from "react-rating-stars-component";
+import { Slide } from 'react-slideshow-image';
 
 const index = () => {
    return (
       <>
-      <ImageBanner src={wallpaper} alt="wallpaper content"/>
+      <Slides>
+         <Slide easing="ease">
+            <div className="each-slide">
+               <ImageBanner src={wallpaper}/>
+            </div>
+            <div className="each-slide">
+               <ImageBanner src={wallpaper2}/>
+            </div>
+            <div className="each-slide">
+               <ImageBanner src={wallpaper3}/>
+            </div>
+         </Slide>
+         </Slides>  
       <P>The best option for today, tomorrow and always</P>
       <ContainerContent>
          <Card>
@@ -24,7 +39,7 @@ const index = () => {
             <Rating>
                <ReactStars
                   count={5}
-                  size={24}
+                  size={30}
                   activeColor="#ffd711"
                />
             </Rating>
@@ -39,7 +54,7 @@ const index = () => {
             <Rating>
                <ReactStars
                   count={3}
-                  size={24}
+                  size={30}
                   activeColor="#ffd711"
                />
             </Rating>
@@ -54,7 +69,7 @@ const index = () => {
             <Rating>
                <ReactStars
                   count={4.5}
-                  size={24}
+                  size={30}
                   activeColor="#ffd711"
                />
             </Rating>
@@ -78,6 +93,8 @@ const Rating = styled.div `
    display: flex;
    margin: 0 0 0 2vw;
    @media screen and (max-width: 768px){
+      font-size: 5vw;
+      margin: -0vw 0 0 10vw;
    }
 `;
 const Description = styled.a `
@@ -86,6 +103,7 @@ const Description = styled.a `
    color: gray;
    justify-content: center;
    @media screen and (max-width: 768px){
+      font-size: 4.4vw;
    }
 `;
 const Card = styled.div `
@@ -121,7 +139,8 @@ const H4 = styled.h4 `
    display: flex;
    justify-content: start;
    @media screen and (max-width: 768px){
-      font-size: 4vw;
+      font-size: 4.5vw;
+      margin: 0vw 0 0 10vw;
    }
 `;
 const A = styled.a`
@@ -129,8 +148,10 @@ const A = styled.a`
    display: flex;
    justify-content: flex-end;
    @media screen and (max-width: 768px){
+      position: relative;
       font-size: 6vw;
-      margin: 0 4vw 4vw 0;
+      margin: 0 10vw 1vw 0;
+      top: 15vw;
    }
 `;
 const Icon = styled.li`
@@ -155,9 +176,11 @@ const Linken = styled(Link) `
       color: rgb(45, 2, 113);
    }
    @media screen and (max-width: 768px){
-      font-size: 4.3vw;
+      font-size: 5vw;
       margin-bottom: 4px;
       text-align: center;
+      margin: 0vw 0 0 10vw;
+      padding-bottom: 5vw;
    }
 `;
 const P = styled.p `
@@ -180,5 +203,10 @@ const ImageBanner = styled.img `
    }
    @media screen and (max-width: 768px){
       height: 60vw;
+   }
+`;
+const Slides = styled.div `
+   :button {
+      display: none;
    }
 `;

@@ -1,5 +1,4 @@
 import React from 'react';
-import './style.css'
 import styled from 'styled-components';
 import 'font-awesome/css/font-awesome.min.css';
 const index = () => {
@@ -105,6 +104,7 @@ const Right = styled.h4 `
    justify-content: center;
    @media screen and (max-width: 768px){
       font-size: 4vw;
+      text-align: center;
       padding-bottom: 10px;
    }
 `;

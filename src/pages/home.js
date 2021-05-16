@@ -1,6 +1,7 @@
 import Content from '../components/Content'
 import React from "react";
 import { createGlobalStyle } from 'styled-components'
+import Slice from '../components/Slice'
 
 const index = () => {
   return (
