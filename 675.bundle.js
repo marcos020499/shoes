@@ -1,0 +1,1 @@
+(self.webpackChunkshoes=self.webpackChunkshoes||[]).push([[675],{675:(s,e,c)=>{"use strict";c.r(e),c.d(e,{default:()=>d});const d=c.p+"5cf408d55500ab4d4e300d9cc4fb74c8.jpg"}}]);
