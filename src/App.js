@@ -1,23 +1,27 @@
+import React, { lazy, Suspense } from 'react';
 import Home from './pages/home'
 import Details from './pages/details'
-import Header from './components/Header'
-import Footer from './components/Footer'
+const Header = lazy(()=> import ('./components/Header'))
+const Footer = lazy(()=> import ('./components/Footer'))
 import {HashRouter, Route, Switch} from "react-router-dom";
-import React from "react";
 
 
 function App() {
   return (
     <div>
     <HashRouter>
-    <Header/>
+      <Suspense fallback={<h1>Still Loading…</h1>}>
+        <Header/>
+      </Suspense>
       <div>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/details" component={Details} />
         </Switch>
       </div>
-      <Footer/>
+      <Suspense fallback={<h1>Still Loading…</h1>}>
+        <Footer/>
+      </Suspense>
     </HashRouter>
   </div>
   );

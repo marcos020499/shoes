@@ -1,4 +1,3 @@
-import React from 'react';
 import './style.css'
 import black from '../../../img/black.png'
 import white from '../../../img/white.png'
@@ -7,11 +6,10 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom'
 import wallpaper from '../../../img/wallpaper.jpg'
 import wallpaper2 from '../../../img/wallpaper2.jpg'
-import wallpaper3 from '../../../img/wallpaper3.jpg'
 import 'font-awesome/css/font-awesome.min.css';
 import ReactStars from "react-rating-stars-component";
 import { Slide } from 'react-slideshow-image';
-
+import React from 'react';
 const index = () => {
    return (
       <>
@@ -22,9 +20,6 @@ const index = () => {
             </div>
             <div className="each-slide">
                <ImageBanner src={wallpaper2}/>
-            </div>
-            <div className="each-slide">
-               <ImageBanner src={wallpaper3}/>
             </div>
          </Slide>
          </Slides>  
