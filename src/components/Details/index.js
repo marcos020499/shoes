@@ -66,19 +66,22 @@ const Content = styled.div `
    display: flex;
    @media screen and (max-width: 768px){
       display: inline-block;
+      width: 100%;
+      padding-bottom: 135vw;
    }
 `;
 const ContainerImages = styled.div `
    display: inline-flexbox;
    width: 65%;
-   height: 10%
+   height: 90%;
+   padding-bottom: 0vw;
    @media screen and (max-width: 768px){
       width: 100%;
       height: 20%;
       display: inline-flexbox;
       justify-content: center;
       text-align: center;
-      padding-bottom: 50vw;
+      padding-bottom: 55vw;
    }
 `;
 const Image = styled.img `
@@ -101,8 +104,9 @@ const ContainerDetails = styled.div `
    justify-content: space-between;
    flex-direction: column;
    width: 50%;
-   height: 10%
+   height: 10%;
    @media screen and (max-width: 768px){
+      width: 100%;
    }
 `;
 const Button = styled.button `
@@ -148,7 +152,7 @@ const ButtonBuy = styled.button `
 const Small = styled.small `
    font-size: 0.8vw;
    @media screen and (max-width: 768px){
-      font-size: 3vw;
+      font-size: 2vw;
    }
 `;
 const ButtonsDiv = styled.div `

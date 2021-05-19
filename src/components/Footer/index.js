@@ -37,7 +37,7 @@ export default index;
 const ContainerFooter = styled.div `
    display: flex;
    @media screen and (max-width: 768px){
-      display: inline-block
+      display: inline-block;
    }
 `;
 const Section = styled.div `

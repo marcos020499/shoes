@@ -197,6 +197,7 @@ const ImageBanner = styled.img `
       transform : scale(1.05);
    }
    @media screen and (max-width: 768px){
+      width: 100%;
       height: 60vw;
    }
 `;
