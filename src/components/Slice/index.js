@@ -4,10 +4,9 @@ import details1 from '../../../img/details1.jpg'
 import details2 from '../../../img/details2.jpg'
 import details3 from '../../../img/details3.jpg'
 import details4 from '../../../img/details4.jpg'
-import styled from 'styled-components';
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css'
-import Rating from "react-rating";
+import ReactStars from "react-rating-stars-component";
 const slideImages = [
    {details1},
    {details2},
