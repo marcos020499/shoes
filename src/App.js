@@ -1,24 +1,26 @@
-import Home from './pages/Home'
-import Details from './pages/Details'
-import Contact from './pages/Contact'
-import  Header from './components/Header'
-import  Footer from './components/Footer'
-import React from 'react';
-import { createGlobalStyle } from 'styled-components'
-import {Switch, HashRouter, Route} from "react-router-dom";
-
+import Home from "./pages/Home";
+import Details from "./pages/Details";
+import Contact from "./pages/Contact";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import React from "react";
+import { createGlobalStyle } from "styled-components";
+import { Switch, HashRouter, Route } from "react-router-dom";
 
 function App() {
   return (
-    <HashRouter>
-      <Header/>
+    <>
+      <HashRouter>
+        <Header />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/details/:id" component={Details} />
           <Route path="/contact" component={Contact} />
         </Switch>
-      <Footer/>
-    </HashRouter>
+        <Footer />
+      </HashRouter>
+      <GlobalStyle />
+    </>
   );
 }
 export default App;
@@ -29,4 +31,4 @@ const GlobalStyle = createGlobalStyle`
     background: linear-gradient(gray, black);
     font-family: 'Inconsolata', monospace;
   }
-`
+`;
